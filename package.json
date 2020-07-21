@@ -1,0 +1,20 @@
+{
+  "name": "azure-fetch-test",
+  "version": "1.0.0",
+  "description": "Testing azure fetch with nwjs",
+  "main": "index.html",
+  "scripts": {
+    "start": "./node_modules/nw/bin/nw ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/jssuttles/azure-fetch-test.git"
+  },
+  "author": "jason@medicom.us",
+  "license": "MIT",
+  "homepage": "https://github.com/jssuttles/azure-fetch-test#readme",
+  "dependencies": {
+    "@azure/storage-blob": "^12.2.0-preview.1",
+    "nw": "^0.47.0"
+  }
+}

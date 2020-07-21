@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Azure Fetch Test</title>
+</head>
+<body>
+  <script>
+    nw.Window.get().showDevTools();
+    const { BlobServiceClient } = require("@azure/storage-blob");
+    const blobServiceClient = new BlobServiceClient(`https://${process.env.AZURE_ACCOUNT}.blob.core.windows.net${process.env.AZURE_SAS_TOKEN}`);
+
+    async function main() {
+      let i = 1;
+      let containers = blobServiceClient.listContainers();
+      for await (const container of containers) {
+        console.log(`Container ${i++}: ${container.name}`);
+      }
+    }
+
+    main();
+  </script>
+</body>
+</html>
