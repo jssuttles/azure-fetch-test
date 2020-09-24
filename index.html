@@ -6,7 +6,7 @@
 </head>
 <body>
   <script>
-    nw.Window.get().showDevTools();
+    nw.Window.get().showDevTools(); // some other comment here
     const { BlobServiceClient } = require("@azure/storage-blob");
     const blobServiceClient = new BlobServiceClient(`https://${process.env.AZURE_ACCOUNT}.blob.core.windows.net${process.env.AZURE_SAS_TOKEN}`);
 
